@@ -48,7 +48,7 @@ export const productSlice = createSlice({
 			action: PayloadAction<{ product: Product }>
 		) => {
 			const { product } = action.payload;
-			const currProduct = state.cart.find((p) => product.id === p.id);
+			const currProduct = state.wishlist.find((p) => product.id === p.id);
 			if (currProduct === undefined) {
 				state.wishlist.push(product);
 			}
@@ -58,7 +58,7 @@ export const productSlice = createSlice({
 			action: PayloadAction<{ productId: number }>
 		) => {
 			const { productId } = action.payload;
-			state.wishlist = state.cart.filter((p) => p.id !== productId);
+			state.wishlist = state.wishlist.filter((p) => p.id !== productId);
 		},
 	},
 });
