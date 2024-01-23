@@ -62,7 +62,7 @@ export default function ProductList() {
 						<Box width={183} p="25px" textAlign="center">
 							<Typography
 								component={Link}
-								href={`products/${product.id}`}
+								href={`/products/${product.id}`}
 								fontSize={16}
 								fontWeight={700}
 								color="#252B42"
